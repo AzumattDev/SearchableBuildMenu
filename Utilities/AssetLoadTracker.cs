@@ -46,7 +46,9 @@ public class AssetLoadTracker
                     if (resourceNames.Any(resourceName => resourceName.EndsWith(bundleName)))
                     {
                         BundleToAssemblyMapping[bundleName] = assembly;
+#if DEBUG
                         SearchableBuildMenuPlugin.SearchableBuildMenuLogger.LogError($"Mapped bundle {bundleName} to assembly {assembly.GetName().Name}");
+#endif
                         break;
                     }
                 }

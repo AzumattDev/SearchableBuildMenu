@@ -1,6 +1,6 @@
 {
   "name": "SearchableBuildMenu",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/AzumattDev/SearchableBuildMenu",
   "description": "This mod introduces a powerful search functionality to the build menu, allowing players to quickly find pieces by name, mod origin, or specific resource requirements.",
   "dependencies": [

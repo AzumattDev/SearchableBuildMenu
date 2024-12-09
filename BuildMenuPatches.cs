@@ -154,3 +154,14 @@ static class TextInputIsVisiblePatch
         }
     }
 }
+
+[HarmonyPatch(typeof(Player),nameof(Player.CopyPiece))]
+static class ClearSearchInputOnCopy
+{
+    static void Prefix(Player __instance)
+    {
+        if (SearchableBuildMenuPlugin.BuildSearchInputField == null) return;
+        SearchableBuildMenuPlugin.BuildSearchInputField.text = string.Empty;
+        SearchableBuildMenuPlugin.BuildSearchInputField.onValueChanged.Invoke(SearchableBuildMenuPlugin.BuildSearchInputField.text);
+    }
+}
